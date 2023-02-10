@@ -33,15 +33,14 @@ export default function App() {
   
   }
 
-  function userBestTime(userTime){
+  function userBestTime(yourTime){
     if (!bestTime){
-      setBestTime(userTime)
+      setBestTime(yourTime)
     }
-    if (bestTime >userTime) {
-      setBestTime(userTime)
+    if (bestTime >yourTime){
+      setBestTime(yourTime)
     }
   }
-
 
   return (
     <>
