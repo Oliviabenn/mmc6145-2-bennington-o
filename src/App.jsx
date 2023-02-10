@@ -34,6 +34,7 @@ export default function App() {
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
         onGameStart={timerStart}
+        onGameEnd={timerStop}
         
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
