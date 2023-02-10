@@ -27,6 +27,7 @@ export default function App() {
 
   function whenGameEnd(){
     timerStop()
+    setPreviousTime(time)
     timerReset()
   }
 
