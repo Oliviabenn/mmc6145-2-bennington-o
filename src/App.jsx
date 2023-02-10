@@ -19,23 +19,36 @@ export default function App() {
   const cardTexts = [
     "Bunny 🐰",
     "Frog 🐸",
-    // "Panda 🐼",
-    // "Doggy 🐶",
-    // "Kitty 😺",
-    // "Duck 🦆",
+    "Panda 🐼",
+    "Doggy 🐶",
+    "Kitty 😺",
+    "Duck 🦆",
   ];
 
   function whenGameEnd(){
     timerStop()
     setPreviousTime(time)
+    userBestTime(time)
     timerReset()
+  
   }
+
+  function userBestTime(userTime){
+    if (!bestTime){
+      setBestTime(userTime)
+    }
+    if (bestTime >userTime) {
+      setBestTime(userTime)
+    }
+  }
+
 
   return (
     <>
       <Header
         // add time, bestTime, previousTime props
         openModal={() => setShowModal(true)}
+
         time={time}
         bestTime={bestTime}
         previousTime={previousTime}
@@ -43,6 +56,7 @@ export default function App() {
       <CardGame
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
+
         onGameStart={timerStart}
         onGameEnd={whenGameEnd}
         
