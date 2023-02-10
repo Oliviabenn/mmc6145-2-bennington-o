@@ -25,6 +25,11 @@ export default function App() {
     // "Duck 🦆",
   ];
 
+  function whenGameEnd(){
+    timerStop()
+    timerReset()
+  }
+
   return (
     <>
       <Header
@@ -38,7 +43,7 @@ export default function App() {
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
         onGameStart={timerStart}
-        onGameEnd={timerStop}
+        onGameEnd={whenGameEnd}
         
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
