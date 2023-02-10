@@ -28,10 +28,12 @@ export default function App() {
       <Header
         // add time, bestTime, previousTime props
         openModal={() => setShowModal(true)}
+        time={time}
       />
       <CardGame
         // add onGameStart, onGameEnd props
         cardTexts={cardTexts}
+        
       />
       <Modal isShown={showModal} close={() => setShowModal(false)} />
     </>
